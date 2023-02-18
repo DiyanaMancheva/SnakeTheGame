@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Snake - The Game</title>
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <h1 class="textCenter ">Snake - The Game</h1>
+    <label for="snakeLength">Snake length</label>
+    <input id="snakeLength" type="number" value="3" />
+    <label for="stonesNumber">Stones</label>
+    <input id="stonesNumber" type="number" value="10" />
+    <label for="foodNumber">Food</label>
+    <input id="foodNumber" type="number" value="5" />
+    <button class="form__button" onclick="engine.StartGame()">Start</button>
+    <p>
+        <strong>Lives: </strong><span id="lives"></span> 
+    </p>
+    <p>
+        <strong>Points: </strong><span id="points"></span> 
+    </p>
+    <section class="clearfix">
+        <canvas id="gameField"></canvas>
+        <aside id="legend">
+            <p>
+                <img id="snake" src="images/snake.png" width="20" height="20" alt="snake" /> Snake<br />
+                <img id="apple" src="images/apple.jpg" width="20" height="20" alt="apple" /> Food. Eat it to grow!!!<br />
+                <img id="stone" src="images/stone.png" width="20" height="20" alt="stone" /> Stone. Avoid it!!! <br />
+            </p>
+            <p>
+                Use arrow keys to control the snake. 
+            </p>
+            <p>
+                Press "Q" to quit the game.
+            </p>
+            <p>
+                Press "P" to pause the game.
+            </p>
+            <p>
+                <strong>Press button Start to start the game </strong>
+            </p>
+        </aside>
+    </section>
+    <script src="./js/gameEngine.js"></script>
+</body>
+</html>
